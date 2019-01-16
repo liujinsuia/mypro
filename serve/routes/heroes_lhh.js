@@ -29,4 +29,12 @@ router.get("/seaVal",(req,res)=>{
 	 	res.send(result);
 	})
 })
+router.get('/myheroes',(req,res)=>{
+	var sql="select * from fbyx_myheroes_lhh";
+	pool.query(sql,(err,result)=>{
+		if(err) throw err;
+		res.send(result);
+	})
+})
+
 module.exports=router;

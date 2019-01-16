@@ -28,43 +28,43 @@
                     </div> 
                     <!-- 手风琴 -->
                    <el-collapse v-model="activeName" accordion class="basic-term" >
-                        <el-collapse-item title="排名" name="1" class="basics-definition_button">                              
+                        <el-collapse-item title="排名" name="1" class="basics-definition_button my-header my-collapse">                         
                             <div class="divtext">你的排名代表了你在《风暴英雄》竞技比赛中的技术水平。要想对比玩家的技术水平，通过查看他们的联赛级别以及级别阶位即可一目了然。请注意你的人品与排名并不相关，根据我们的了解排名和智商、同情心、社交能力或电影品位并没有任何直接联系。</div>
                         </el-collapse-item>
-                        <el-collapse-item title="联赛级别"  name="2" class="basics-definition_button">
+                        <el-collapse-item title="联赛级别"  name="2" class="basics-definition_button my-header my-collapse">
                             <div class="divtext">玩家将分布到数个联赛级别中，联赛级别也将显示出一名玩家的大体水平。联赛级别从低到高分别为：青铜、白银、黄金、白金、钻石、大师以及宗师。</div>
                         </el-collapse-item>
-                        <el-collapse-item title="级别阶位" name="3" class="basics-definition_button">
+                        <el-collapse-item title="级别阶位" name="3" class="basics-definition_button my-header my-collapse">
                            <div class="divtext">
                                青铜到钻石的每个级别都将细分为五个阶位。最低的阶位以5表示，最高的阶位以1表示。从玩家的阶位你可以了解到他距离下一个级别还有多远。举例来说，白金1玩家的排名是高过白金4玩家的，而白金4玩家的排名要比黄金2的玩家高。
                            </div>
                         </el-collapse-item>
-                        <el-collapse-item title="赛季 " name="4" class="basics-definition_button">
+                        <el-collapse-item title="赛季 " name="4" class="basics-definition_button my-header my-collapse">
                             <div class="divtext">
                                 玩家排名将持续到赛季结束。每个赛季结束后，排名将重置，你将根据你在本赛季中达到的最高排名获得赛季奖励（包括独特坐骑）以及决定你在新赛季中的起始位置。
                             </div>
                         </el-collapse-item>
-                        <el-collapse-item title="定级赛 " name="5" class="basics-definition_button">
+                        <el-collapse-item title="定级赛 " name="5" class="basics-definition_button my-header my-collapse">
                             <div class="divtext">
                                 如果你是第一次尝试排名模式，在新赛季开始时你需要完成十场定级赛来让系统读取你的个人水平数据。请注意，在完成定级赛的期间，你只能和同样在进行定级赛的玩家组队进行比赛。完成定级赛将决定你在这个赛季的起始位置，然后你就可以开始获取排名积分了。
                             </div>
                         </el-collapse-item>
-                        <el-collapse-item title="排名积分" name="6" class="basics-definition_button">
+                        <el-collapse-item title="排名积分" name="6" class="basics-definition_button my-header my-collapse">
                             <div class="divtext">
                                 每场排名比赛后，你都会根据输赢获得或失去排名积分。获得或失去积分同时你的级别和阶位也会发生变化。举例来说，如果排名积分掉到0，你将需要参加降级赛。而如果积分达到了1000，你就会有机会参加晋级赛。
                             </div>
                         </el-collapse-item>
-                        <el-collapse-item title="晋级赛" name="7" class="basics-definition_button">
+                        <el-collapse-item title="晋级赛" name="7" class="basics-definition_button my-collapse">
                             <div class="divtext">
                                 为了升到更高阶位/级别，你需要参加并赢得晋级赛的胜利。机制很简单，只要你达到了1000分，你的下一场比赛就会是一场晋级赛。胜利后不单会升到更高的阶位/级别，也一样会获得胜利的排名积分。如果你输掉了晋级赛，你将保留在现有的阶位/级别，并失去正常排名比赛失败的排名积分。
                             </div>
                         </el-collapse-item>
-                        <el-collapse-item title="降级赛" name="8" class="basics-definition_button">
+                        <el-collapse-item title="降级赛" name="8" class="basics-definition_button my-header my-collapse">
                             <div class="divtext">
                                 降级赛就是和晋级赛相反的比赛。如果你的排名积分降到0，你将有可能被降级/降阶，因此你的下一场比赛将是降级赛。如果你赢得了降级赛的胜利，你将保留在现有的阶位/级别，而且会获得胜利的排名积分，暂时回到安全区。但是如果输了，你将降到下一级别/阶位。
                             </div>
                         </el-collapse-item>
-                         <el-collapse-item title="宗师" name="9" class="basics-definition_button">
+                         <el-collapse-item title="宗师" name="9" class="basics-definition_button my-header my-collapse">
                             <div class="divtext">
                                 钻石级之后还有大师级和宗师级。这个级别里的玩家都是个中好手，比赛的激烈程度将比前面级别高上许多。在大师级的比赛里，排名积分的获取方式会有所不同。大师级没有阶位，只有积分，而英雄联赛中前500名分数最高的玩家，以及团队联赛中前100名分数最高的玩家将进入宗师级。到达宗师级后，你能看到你在地区服务器宗师级玩家之间的排名，这个排名每日都会更新。如果你看到一名宗师级且排名为3的玩家，那就说明你遇到了在你的地区排名第三的宗师级玩家！
                             </div>
@@ -93,7 +93,7 @@
                         </ul>
                         <div class="extras">
                         <h4 class="paragraph_heading_alternate">禁言玩家限制</h4>
-                        <span>排名模式是代表了竞技、挑战的比赛。因为在这种比赛中沟通十分重要，我们将禁止被禁言的玩家排队参加英雄联赛，直至他们的禁言惩罚结束为止。</span>
+                        <span class="span1">排名模式是代表了竞技、挑战的比赛。因为在这种比赛中沟通十分重要，我们将禁止被禁言的玩家排队参加英雄联赛，直至他们的禁言惩罚结束为止。</span>
                         </div>
                         </div>
                     </div>
@@ -145,18 +145,18 @@
                             <p class="paragraph__description">一开始，很多人可能对如何征召感到一头雾水，特别是很多人只想打比赛而不想花费精力考虑队伍构成。但要知道，一次成功的团队征召能为你带来重要的优势。因此，为了帮你们更好地完成英雄征召，我们准备了一些小提示：</p>
                                 <!-- 手风琴 -->
                             <el-collapse v-model="activeName" accordion class="basic-term" >
-                                <el-collapse-item title="时刻关注对方" name="10" class="basics-definition_button">  
+                                <el-collapse-item title="时刻关注对方" name="10" class="basics-definition_button my-collapse">  
                                     <div class="divtext">自己在征召的同时也要关注对方的动态，看看他们选了什么英雄，分析他们的战术。</div>
                                 </el-collapse-item>
-                                <el-collapse-item title="不要紧张"  name="11" class="basics-definition_button">
+                                <el-collapse-item title="不要紧张"  name="11" class="basics-definition_button my-collapse">
                                     <div class="divtext">理想状态下，你和你队伍会很快就英雄配置达成一致，而且大家都按照计划进行选择，将对面的阴谋诡计摧毁殆尽。但很可惜，现实世界会有很多变数，所以如果遇到了什么意外情况，请不要紧张，专注现有情况作出调整即可。</div>
                                 </el-collapse-item>
-                                <el-collapse-item title="与队伍沟通" name="12" class="basics-definition_button">
+                                <el-collapse-item title="与队伍沟通" name="12" class="basics-definition_button my-collapse">
                                 <div class="divtext">
                                     你的队伍需要知道你能用哪些英雄，哪些英雄用得好，哪些英雄仍需要更多联系。同样的 ，你也需要聆听队伍的反馈。
                                 </div>
                                 </el-collapse-item>
-                                <el-collapse-item title="考虑构成" name="13" class="basics-definition_button">
+                                <el-collapse-item title="考虑构成" name="13" class="basics-definition_button my-collapse">
                                     <div class="divtext">
                                         比赛战术将围绕你们的英雄组成展开。有些组合适合带线，有些组合适合打团，有些组合适合游击，因此你们需要沟通并制定好战术方向，然后选择对应的英雄。
                                     </div>
@@ -189,13 +189,7 @@ export default {
   }
 </script>
 <style scoped>
-body{
-    margin:0px;
-    padding: 0px;
-    background: #08000f;
-    font-size: 14px;
-    color:#bdebf3;
-}
+
 .con{
     background: #08000f;
     width: 100%;
@@ -245,11 +239,10 @@ body{
     text-shadow: 0 0 1rem #009cff;
 }
 .section_description {
-    /* width: 80%;
-    margin: auto; */
+    
     margin-bottom: 2.6em;
     margin-top: 2.6em;
-    font-size: 1.125rem;
+    font-size: 24px;
     color: #8eb1bc;
     line-height: 1.6;
     text-align: center;
@@ -267,13 +260,15 @@ body{
     display: block;
 }
 .section{
-    /* padding-top:20px; */
+   
     font-weight: 400;
     color: #fff;
     line-height: 1.2;
     text-shadow: 0 0 1rem #009cff;
     text-transform: uppercase;
     text-align: center;
+    font-size:3.0em;
+    margin-bottom: 0px;
 }
 .ranked-play-basics-ranks {
     margin-top: 360px;
@@ -283,6 +278,11 @@ body{
     font-size: .8rem;
     font-style: italic;
     color: #c5bdcc;
+    text-align: center;
+    margin-top:-60px;
+}
+.text-center{
+   text-align: center; 
 }
 .section_description{
     color: #8eb1bc;
@@ -294,7 +294,7 @@ body{
     text-align: left;
     margin-left: 15%;
     width: 70%;
-    font-size: 16px;
+    font-size: 20px;
     color: #8eb1bc;
     line-height: 1.6;
     margin-bottom: 2.6em;
@@ -312,10 +312,11 @@ body{
     line-height: 1.6
 }
 .container3 .section_title{
-    font-size: 34px;
+    font-size: 45px;
     padding-top: 35px;
     margin-bottom: 0px;
 }
+
 .container{
     width: 70%;
     text-align: left;
@@ -329,15 +330,16 @@ body{
     text-transform: uppercase;
 }
 .paragraph_heading_alternate {
+    margin-top: 0px;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-weight: 400;
     text-transform: uppercase;
     line-height: 1.2;
     color: #6cf;
 }
 .container .paragraph_description1{
-    font-size: 1rem;
+    font-size: 20px;
     color: #8eb1bc;
     line-height: 1.6;
     text-align: left;
@@ -354,19 +356,20 @@ body{
 }
 .game-mode-description {
     position: relative;
-    padding: 450px 24px 10px 76px;
-    margin-top: -110px;
+    padding: 465px 24px 10px 76px;
+    margin-top: -155px;
     width: 462px;
     min-height: 300px;    
 }
 .game-mode-hero{
     background: url(../../public/img/Ranked_Modes_Hero.png) no-repeat -10px top;
     /* float: left; */
+    background-size: 600px;
 }
 .game-mode-description-title {
     position: absolute;
-    top:240px;
-    left:170px;
+    top:320px;
+    left:235px;
     width: 140px;
     text-align: center;
     margin: 0 auto;
@@ -375,13 +378,15 @@ body{
     font-weight: 700;
     color: #fff;
     line-height: 1.2;
-    font-size: 24px;
+    font-size: 30px;
     text-transform: uppercase;
 }
 .text{
     position: relative;
-    top:-40px;
+    top:50px;
     text-align: left;
+    color: #bdebf3;
+    margin: auto;
     /* font-size: 16px; */
 }
 
@@ -389,32 +394,38 @@ body{
     color: #fff;
 }
 .paragraph_description2{
-    width: 90%;
-    font-size: 15px;
+    width: 85%;
+    font-size: 20px;
     color: #8eb1bc;
     line-height: 1.6;
     text-align: left;
     margin-bottom: 2.6em;
+    margin: auto;
     margin-top: 2.6em; 
+    
 }
 .container .paragraph_heading_alternate {
     text-align: left;
-    font-size: 22px;
+    font-size: 26px;
     line-height: 1.2;
     color: #6cf;
+    margin-left:25px;
     margin-top: 0px;
-}
+    font-weight: 500;
+    margin-bottom: 20px;
+    }
 
 .play-reasons{
 list-style: none;
 color:#bdebf3;
 text-align: left;
+margin-left: 20px;
 }
  .play-reason {
     position: relative;
     padding-left: 1em;
     list-style: none;
-    font-size: 14px;
+    font-size: 16px;
     margin-left: -40px;
 }
 .play-reason:before {
@@ -422,19 +433,18 @@ text-align: left;
     position: absolute;
     left: 0;
 }
-.extras .paragraph_heading_alternate span{
-font-size: 14px;
+.span1{
+font-size: 16px;
 color:#bdebf3;
+margin-left: 20px;
 }
-.game-mode-description{
-    /* float: left; */
-}
+
 .game-mode-team{
     background: url(../../public/img/Ranked_Modes_Team.png) no-repeat -10px top; 
-    /* float: right;  */
     position: relative; 
-     top: -678px;
-    left:505px;
+     top: -700px;
+    left:600px;
+    background-size: 600px  ;
 }
 .container4 {
     background-size: auto;
@@ -463,17 +473,15 @@ color:#bdebf3;
     margin-top: 425px;
     margin-left: 15%;
 }
-.title{
-   
-}
+
 .title .section_title{
-   font-size: 36px;
+   font-size: 45px;
    text-align: left;
    margin-bottom: 10px;
 }
 .title .paragraph_heading_alternate {
     text-align: left;
-    font-size: 22px;
+    font-size: 28px;
    /* margin-top: 0px; */
    
 }
@@ -540,12 +548,12 @@ color:#bdebf3;
     margin: .4em 0;
 }
 .ranked-play-draft-pick-content--description{
-    font-size: 14px;
+    font-size: 18px;
     color: #bdebf3;
 }
 .paragraph__description{
     margin-bottom: 2.6em;
-    font-size: 1rem;
+    font-size: 20px;
     color: #8eb1bc;
     line-height: 1.6;
     margin-top: 1em;
@@ -555,12 +563,12 @@ color:#bdebf3;
     /* width: 80%; */
     position: relative;
     /* top:-30px; */
-    top:-35px;
+    top:-40px;
     background: url(../../public/img/divider.png) no-repeat center top;
 }
 .container5 .section{
    padding-top: 75px;
-   font-size: 34px;
+   font-size: 45px;
    margin-bottom: 10px;
 }
 .container5 .paragraph_heading_alternate{
@@ -568,15 +576,14 @@ padding-top:0px;
 margin-top: 0%;
 }
 .container5 .paragraph_heading_alternate{
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 500;
 }
 .container5 .paragraph__description {
     width: 60%;
-    /* margin: 1.6em 0; */
     margin-left: 20%;
     margin-top: 25px;
-    font-size: 1rem;
+    font-size: 20px;
     color: #8eb1bc;
     line-height: 1.6;
     text-align: center;
@@ -592,55 +599,46 @@ margin-top: 0%;
     position: relative;
     padding-top: 600px;
 }
-.el-carousel__mask, .el-cascader-menu, .el-cascader-menu__item.is-disabled:hover, .el-collapse-item__header, .el-collapse-item__wrap{
+.el-collapse-item__header{
+     
+    width: 80% !important;
+    margin: auto !important;
+    color: #fff !important;
     background: linear-gradient(#19193f,#0f325b) !important;
     background: #0c3c59;
 }
-.el-collapse-item__header{
-     
-    /* width: 80% !important; */
-    margin: auto !important;
-    color: #fff !important;
-    
-}
-.el-collapse-item__content{
-     /* width: 80% !important; */
-     margin: auto !important;
-    font-size: 14px !important;
-    text-align: left !important;
-       color: #bdebf3 !important;
-}
-.container4 .basic-term {
- width: 80% !important;
- margin-left: 0% !important;
 
+ .basic-term {
+ width: 80% !important;  
+   background: linear-gradient(#19193f,#0f325b) !important;
+   background: #0c3c59;
 }
-.basic-term {
- width: 70% !important;
-  margin: auto !important;
-}
-.basics-definition_button {  
-    color: #fff; 
-    font-size: 20px;
-    background: linear-gradient(#19193f,#0f325b) !important;
-}
-.basic-term--title {
+.container2 .basic-term{ width: 70% !important; margin: auto !important;}
+
+.el-collapse-item__header.is-active {
+    border-bottom-color: transparent;
+} 
+
+.section_title[data-v-b6c96954] {
+    font-weight: 400;
     color: #fff;
+    line-height: 1.2;
+    text-shadow: 0 0 1rem #009cff;
     text-transform: uppercase;
-    text-align: left;
 }
-.basic-term--description {
-    display: block;
-    font-size: 14px;
-    padding: 4rem 5rem 3rem 4rem;
-    color: #bdebf3;
+.el-carousel__mask, .el-cascader-menu, .el-cascader-menu__item.is-disabled:hover, .my-collapse>>>.el-collapse-item__header,.my-collapse >>> .el-collapse-item__wrap{
+     background: linear-gradient(#19193f,#0f325b) !important;
+     background: #0c3c59;
+     padding-left:100px;
+     color: #fff !important;
+     font-size: 20px !important;
     }
-.divtext{
- width: 80%;
- margin: auto;
-}
-.el-collapse-item__header{
-    font-size: 20px !important;
-    padding-left: 100px !important;
+.my-collapse >>> .el-collapse-item__content {    
+    width: 90%;    
+    padding-left:50px;
+    color: #fff !important;
+    text-shadow: 5px 5px 1rem #009cff;
+     padding-top:10px;
+     font-size: 16px !important;
 }
 </style>

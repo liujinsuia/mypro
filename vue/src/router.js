@@ -18,6 +18,9 @@ import ranking from './components/ranking.vue';
 import game from './pages/pxj/game.vue'
 import map from './pages/pxj/map.vue'
 import not from './pages/pxj/not.vue'
+import game_spec from './views/Games_spec.vue'
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -65,7 +68,8 @@ export default new Router({
       component:heroes
     },
     {
-      path:'/details',
+      path:'/details/:id',
+      name:'details',
       component:details
     },
     {
@@ -96,6 +100,10 @@ export default new Router({
     },{
       path:'/game',
       component:game
+    },
+    {
+      path:'/gamespec',
+      component:game_spec
     },
     {
       path:'**',

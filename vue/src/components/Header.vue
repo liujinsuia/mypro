@@ -43,7 +43,7 @@
                                                 <div class="Nav-dropdownBoxInner">
                                                     <ul class="Nav-dropdownList">
                                                         <li class="Nav-dropdownItem">
-                                                            <router-link to="/game" class="Nav-dropdownLink">游戏特色</router-link>
+                                                            <router-link to="/ybxitese" class="Nav-dropdownLink">游戏特色</router-link>
                                                         </li>
                                                         <li class="Nav-dropdownItem">
                                                             <router-link to="/game" class="Nav-dropdownLink">游戏概览</router-link>
@@ -126,7 +126,7 @@
                                             <div class="Nav-dropdownBoxInner">
                                                 <ul class="Nav-dropdownList">
                                                     <li class="Nav-dropdownItem">
-                                                        <router-link to="/game" class="Nav-dropdownLink">游戏特色</router-link>
+                                                        <router-link to="/yxfffts" class="Nav-dropdownLink">游戏特色</router-link>
                                                     </li>
                                                     <li class="Nav-dropdownItem">
                                                         <router-link to="/game" class="Nav-dropdownLink">游戏概览</router-link>

@@ -530,7 +530,7 @@
     overflow: hidden;
     color: #34ffff;
     background-image: -webkit-linear-gradient(#ffffff,#34ffff);
-    -webkit-background-clip: text; 
+    /* -webkit-background-clip: text;  */
     -webkit-text-fill-color: transparent;
     font-weight: 700;
     padding: 0 10px;

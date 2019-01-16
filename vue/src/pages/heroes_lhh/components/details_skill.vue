@@ -1,15 +1,16 @@
 <template>
-  <div class="app_skill">
+<div>
+  <div class="app_skill" v-for="item of mySkills" :key="item.heroes_id">
     <!-- first part -->
     <img src="../../../../public/heroes_lhh/border_line.png" alt>
     <div class="first_part">
       <div class="div_item">
-        <div v-for="(item,i) of 4" :key="i">
+        <div v-for="(son_item1,i) of 4" :key="i">
           <div class="div_item_icon"></div>
           <div class="div_item_dtl">
             <p>伤害能力</p>
             <div>
-              <el-progress :text-inside="true" :stroke-width="18" :percentage="80"></el-progress>
+              <el-progress :text-inside="true" :stroke-width="18" :percentage="item.heroes_skill[i]"></el-progress>
             </div>
           </div>
         </div>
@@ -26,37 +27,37 @@
               <img src="../../../../public/heroes_lhh/Fcarrion-swarm.png" alt>
             </div>
             <div class="div_img_img">
-              <img src="../../../../public/heroes_lhh/Fcarrion-swarm.png" alt>
+              <img src="../../../../public/heroes_lhh/dark-conversion.png" alt>
             </div>
           </div>
         </div>
       </div>
       <div class="div_item">
         <div class="item3 item4">
-          <h3>终极技能</h3>
+          <h3>初始技能</h3>
           <div class="div_img">
             <div class="div_img_img">
-              <img src="../../../../public/heroes_lhh/Fcarrion-swarm.png" alt>
+              <img src="../../../../public/heroes_lhh/fel-claws.png" alt>
             </div>
             <div class="div_img_img">
-              <img src="../../../../public/heroes_lhh/Fcarrion-swarm.png" alt>
+              <img src="../../../../public/heroes_lhh/Fnecrotic-embrace.png" alt>
             </div>
             <div class="div_img_img">
-              <img src="../../../../public/heroes_lhh/Fcarrion-swarm.png" alt>
+              <img src="../../../../public/heroes_lhh/Fnight-rush.png" alt>
             </div>
           </div>
         </div>
         <div class="item3 item4">
-          <h3>终极技能</h3>
+          <h3>战斗特质</h3>
           <div class="div_img">
             <div class="div_img_img">
-              <img src="../../../../public/heroes_lhh/Fcarrion-swarm.png" alt>
+              <img src="../../../../public/heroes_lhh/Fvampiric-touch.png" alt>
             </div>
             <div class="div_img_img">
               <img src="../../../../public/heroes_lhh/Fcarrion-swarm.png" alt>
             </div>
             <div class="div_img_img">
-              <img src="../../../../public/heroes_lhh/Fcarrion-swarm.png" alt>
+              <img src="../../../../public/heroes_lhh/Fvampiric-touch.png" alt>
             </div>
           </div>
         </div>
@@ -65,16 +66,16 @@
     <h2 class="sec_h2">初始技能</h2>
     <img src="../../../../public/heroes_lhh/border_line.png" alt>
     <div class="sec_part">
-      <div class="hero_video_box" v-for="(item,i) of 3" :key="i">
+      <div class="hero_video_box" v-for="(item_son2,i) of 3" :key="i">
         <div class="skill_video_div">
           <img class="skill_video_img" src="../../../../public/heroes_lhh/shadow-waltz.jpg" alt>
         </div>
         <div class="skill_border">
-          <img src="../../../../public/heroes_lhh/Fcarrion-swarm.png" alt>
+          <img src="../../../../public/heroes_lhh/fel-claws.png" alt>
         </div>
         <div class="skill_border_dtl">
-          <p>暗影华尔兹</p>
-          <span>在0.5秒后，对一条直线上的敌人造成150点伤害。 如果命中英雄，则暗影华尔兹的冷却时间缩短至2秒，返还0点法力值，并允许奥菲娅朝移动方向突进一小段距离。</span>
+          <p>{{item.initSkill[i].skill_name}}</p>
+          <span>{{item.initSkill[i].skill_des}}</span>
         </div>
       </div>
     </div>
@@ -82,7 +83,7 @@
     <h2 class="sec_h2">终极技能</h2>
     <img src="../../../../public/heroes_lhh/border_line.png" alt>
     <div class="sec_part last_skill">
-      <div class="hero_video_box" v-for="(item,i) of 3" :key="i">
+      <div class="hero_video_box" v-for="(item_son3,i) of 3" :key="i">
         <div class="skill_video_div">
           <img class="skill_video_img" src="../../../../public/heroes_lhh/shadow-waltz.jpg" alt>
         </div>
@@ -90,8 +91,8 @@
           <img src="../../../../public/heroes_lhh/Fcarrion-swarm.png" alt>
         </div>
         <div class="skill_border_dtl skill_three">
-          <p>暗影华尔兹</p>
-          <span>在0.5秒后，对一条直线上的敌人造成150点伤害。 如果命中英雄，则暗影华尔兹的冷却时间缩短至2秒，返还0点法力值，并允许奥菲娅朝移动方向突进一小段距离。</span>
+          <p>{{item.lastSkill[i%2].skill_name}}</p>
+          <span>{{item.lastSkill[i%2].skill_desc}}</span>
         </div>
       </div>
     </div>
@@ -100,26 +101,57 @@
       <h2 class="sec_h2">探索更多英雄技能</h2>
       <img src="../../../../public/heroes_lhh/border_line.png" alt>
       <div class="sec_part">
-        <div v-for="(item,i) of 4" :key="i">
+        <div v-for="(item_son4,i) of moreHeroes" :key="i">
           <div class="hero_video_box">
-            <img src="../../../../public/heroes_lhh/bust.jpg" alt="">
+            <img :src='item_son4.img_url' alt="">
           </div>
-          <h3 class="ser_her_title">凯斯</h3>
-          <div class="ser_her_dtl_icon"></div><span class="ser_her_dtl">臭名昭著的罪犯</span>
+          <h3 class="ser_her_title">{{item_son4.name}}</h3>
+          <div class="ser_her_dtl_icon"></div><span class="ser_her_dtl">{{item_son4.title}}</span>
         </div>
       </div>
     </div>
   </div>
+  </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      mySkills:this.skills,
+      skill_num:this.skills.heroes_skill,
+      moreHeroes:[
+        {
+          img_url:"http://127.0.0.1:3000/heroes_lhh/1.jpg",
+          name:"奥菲雅",
+          title:"充满好奇心的探机"
+        },{
+          img_url:"http://127.0.0.1:3000/heroes_lhh/2.jpg",
+          name:"祖尔",
+          title:"自由战士DJ"
+        },{
+          img_url:"http://127.0.0.1:3000/heroes_lhh/3.jpg",
+          name:"卢西奥",
+          title:"萨卡兰姆圣教军"
+        },{
+          img_url:"http://127.0.0.1:3000/heroes_lhh/4.jpg",
+          name:"凯尔萨斯",
+          title:"太阳之王"
+        }
+      ]
+    }
+  },
+  props:{
+    skills:Array
+  }
+};
 </script>
 <style scoped>
+
 .app_skill {
   background: #0d0011;
   padding: 0 140px 0 140px;
   width: 100%;
-  height: 2300px;
+  height: 2000px;
   box-sizing: border-box;
 }
 .app_skill > img {
@@ -135,7 +167,7 @@ export default {};
   justify-content: space-between;
 }
 .first_part .div_item {
-  width: 280px;
+  width: 275px;
   height: 330px;
   background: #160d28;
   box-sizing: border-box;
@@ -222,7 +254,7 @@ export default {};
 }
 /* 相对定位 */
 .sec_part .hero_video_box {
-  width: 368px;
+  width: 330px;
   height: 425px;
   box-sizing: border-box;
   background: #130b21;

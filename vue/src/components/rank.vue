@@ -169,7 +169,6 @@
       Hero:function(){
           var url="http://127.0.0.1:3000/rank";
           this.axios.get(url).then((res)=>{
-               console.log(res.data); 
                this.hero=res.data.hreo;
                this.team=res.data.team;
           })
@@ -197,7 +196,6 @@
        var url = "http://127.0.0.1:3000/hroelist?pno="+this.pno+"&pageSize="+this.pageSize;
        this.axios.get(url).then(result=>{
           //this.list = result.body.data;
-          console.log(result)
           var rows = this.list.concat(result.data.data);
           this.list = rows;
           //保留总页数
@@ -443,7 +441,7 @@ option {
     position: relative;
     text-align: center;
     text-shadow: 0 0 16px rgba(0,0,0,.8);
-    vertical-align: middle;
+    /* vertical-align: middle; */
     margin-left: -3px;
 }
 .player-stats{

@@ -187,6 +187,9 @@
     }
 </script>
 <style scoped>
+*,:after,:before{
+    box-sizing:content-box !important;   
+ }
 h1,h2,h3,h4,h5,h6{
       font-weight: 400;  
     }

@@ -74,11 +74,8 @@ export default{
     //  }  
      var url=this.url+this.Num;
      this.axios.get(url).then(res=>{
-       console.log(res);
         this.list=this.list.concat(res.data.data);
          this.Count=res.data.count;
-         console.log(this.Count)
-         console.log(this.Num)
          if(this.Count==this.Num){
            this.btnActive=true;
          }
@@ -90,7 +87,6 @@ export default{
     play(item,index){
         this.gameimg_url_lg=item;
         this.index=index;
-        console.log(this.index);
         this.dialogVisible=true;
         this.title=this.list[index].title
     },
@@ -98,7 +94,6 @@ export default{
       if(this.index<this.list.length-1)
       this.index++;
       this.gameimg_url_lg=this.list[this.index].bgimg_url;
-      console.log(this.gameimg_url_lg)
     },
     prev(){
       if(this.index>0){

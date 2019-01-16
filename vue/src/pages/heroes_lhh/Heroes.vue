@@ -45,9 +45,8 @@
       </div>
     </div>
     <!-- 英雄部分 -->
-    <router-link to="/details">
       <div class="heroes_list">
-        <div class="heroes_list_item" v-for="(item,i) of herObj" :key="i">
+        <div class="heroes_list_item" v-for="item of herObj" :key="item.id" :class="item.img_url==''?'vibhid':false" @click="checkDtl(item.id)">
           <a href="#">
             <div class="hero_list_box">
               <img :src="item.img_url" alt>
@@ -61,7 +60,6 @@
           </a>
         </div>
       </div>
-    </router-link>
   </div>
 </template>
 
@@ -110,6 +108,9 @@ export default {
     };
   },
   methods: {
+    checkDtl(index){
+      this.$router.push(`/details/${index%2}`)
+    },
     /**
      * 类型选择
      */
@@ -180,8 +181,26 @@ export default {
       }else{
         this.getAll();
       }
+    },
+    classObj_game:{
+      
+    },
+    conPre(){
+      if(this.classObj_game.overwatch){
+        var url = "http://127.0.0.1:3000/heroes/myheroes";
+        this.axios.get(url).then(res => {
+          this.herObj = res.data;
+        });
+      }else{
+        this.getAll();
+      }
     }
-  }
+  },
+  computed: {
+    conPre(){
+      return this.classObj_game.overwatch;
+    }
+  },
 };
 </script>
 <style scoped>
@@ -189,6 +208,9 @@ body,
 html {
   padding: 0;
   margin: 0;
+}
+.vibhid{
+  visibility: hidden;
 }
 .my_header_search {
   padding: 20px;
@@ -417,9 +439,11 @@ html {
   opacity: 1;
 }
 .hero_heading i {
+  display: inline-block;
   color: #8eb1bc;
   font-size: 14px;
   font-style: normal;
   margin-left: 5px;
+  width: 150px;
 }
 </style>

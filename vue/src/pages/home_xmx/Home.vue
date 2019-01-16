@@ -23,7 +23,8 @@
   </div>
   <!-- 这里是头部视频 -->
   <div class="kv_video_box" :style="s2">
-    <video id="home_top_video" muted="muted" autoplay="autoplay" loop="loop" poster="http://127.0.0.1:3000/blizzard/HeroesHomeKV.jpg"  preload="auto">
+    <video id="home_top_video"  autoplay="autoplay" loop="loop" poster="http://127.0.0.1:3000/blizzard/HeroesHomeKV.jpg"  preload="auto">
+    <!-- <source type="video/webm" src="http://flv.bn.netease.com/videolib3/1505/27/wQnvR4725/HD/wQnvR4725-mobile.mp4"> -->
     <source type="video/webm" src="http://127.0.0.1:3000/video/Toys_Loop.webm">
     <source type="video/mp4" src="http://127.0.0.1:3000/video/Toys_Loop.mp4">
     </video>
@@ -348,11 +349,9 @@
        var url = "http://127.0.0.1:3000/newslist?pno="+this.pno+"&pageSize="+this.pageSize;
        this.axios.get(url).then(result=>{
           var rows = this.list.concat(result.data.data);
-          console.log(result)
          this.list = rows;
           //保留总页数 
          this.pageCount = result.data.pageCount;
-         console.log(result.data.pageCount)
        });
        //2:并且显示组件模板中
     }

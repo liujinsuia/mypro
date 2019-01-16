@@ -60,11 +60,8 @@ methods:{
      this.Num++;  
      var url="http://127.0.0.1:3000/api/getnews?size=12&num="+this.Num+"&newsclass="+this.newsclass;
      this.axios.get(url).then(res=>{
-       console.log(res);
         this.list=this.list.concat(res.data.data);
          this.Count=res.data.count;
-         console.log(this.Count)
-         console.log(this.Num)
          if(this.Count==this.Num){
            this.btnActive=true;
          }else{
